@@ -37,6 +37,7 @@ This guide provides a step-by-step approach for building a full-stack applicatio
    5. Install Axios:
         Run npm install axios to handle HTTP requests.
    6. Install Install Material UI for style the page:
+      
       npm install @mui/material @emotion/react @emotion/styled (type in terminal and Enter)
 
  
