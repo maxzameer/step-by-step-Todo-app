@@ -31,12 +31,15 @@ This guide provides a step-by-step approach for building a full-stack applicatio
    1. Create a project directory. 
    2. Open your terminal (Command Prompt or PowerShell) in same directory.
    3. To install Create React App:
+      
         npx create-react-app todo-app (type in terminal and Enter)
-   4. Change directory into the app:
+   5. Change directory into the app:
+      
         cd todo-app (type in terminal and Enter)
-   5. Install Axios:
+   7. Install Axios:
+      
         Run npm install axios to handle HTTP requests.
-   6. Install Install Material UI for style the page:
+   9. Install Install Material UI for style the page:
       
       npm install @mui/material @emotion/react @emotion/styled (type in terminal and Enter)
 
