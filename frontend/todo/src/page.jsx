@@ -129,7 +129,6 @@ const TodoApp = () => {
               </Button>
             </Box>
           </Paper>
-          <h3 style={{ textAlign: "end" }}>Total Task : {todos.length}</h3>
         </Container>
       </Box>
     </Box>
