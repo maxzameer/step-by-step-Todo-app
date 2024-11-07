@@ -8,14 +8,14 @@ public class ToDo {
     String name;
     Date dueDate;
     String task;
-   public State state;
+   public String state;
 
-    public ToDo(int id ,String name, Date date, String task) {
+    public ToDo(int id ,String name, Date date, String task,String state) {
         this.name = name;
         this.dueDate = date;
         this.task = task;
         this.id = id;
-        state = State.pending;
+        this.state = state;
     }
 
     public String getName() {
@@ -50,21 +50,10 @@ public class ToDo {
         this.id = id;
     }
 
-    public State getState() {
-        return state;
-    }
 
-    public void setState(State state) {
+
+    public void changeState(String state) {
         this.state = state;
-    }
-
-    public void changeState() {
-        state = State.completed;
 
     }
-}
- enum State {
-    completed,
-    pending,
-
 }

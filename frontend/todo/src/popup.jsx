@@ -32,11 +32,11 @@ const PopupModal = (props) => {
         name: nameValue,
         task: taskValue,
         dueDate: dateValue,
-        status: "pending",
+        state: "pending",
       };
 
       axios
-        .put("http://localhost:8080/todo/" + data.id, data)
+        .put("http://localhost:8080/todo/update/" + data.id, data)
         .then((response) => {
           props.triggerEffect();
           props.close();

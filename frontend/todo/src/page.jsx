@@ -23,13 +23,13 @@ const TodoApp = () => {
         name: nameValue,
         task: taskValue,
         dueDate: dateValue,
-        status: "pending",
+        state: `pending`,
       };
 
       axios
         .post("http://localhost:8080/todo/create", data)
         .then((response) => {
-          alert("successfull" + response.data);
+          alert(response.status);
         })
         .catch();
 

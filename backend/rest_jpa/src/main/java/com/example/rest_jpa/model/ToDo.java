@@ -9,28 +9,33 @@ import java.util.Date;
 @Table(name = "todo_info")
 public class ToDo {
 
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer id;
     String name;
     Date dueDate;
     String task;
-    @Enumerated(EnumType.STRING)
-    public State state;
+    public String state;
 
     public ToDo() {
     }
 
-    public ToDo(int id , String name, Date date, String task) {
+    public ToDo(int id , String name, Date date, String task,String state) {
         this.name = name;
         this.dueDate = date;
         this.task = task;
         this.id = id;
-        state = State.pending;
+        this.state = state;
     }
 
     public String getName() {
         return name;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public void setName(String name) {
@@ -61,21 +66,18 @@ public class ToDo {
         this.id = id;
     }
 
-    public State getState() {
+
+
+    public void changeState(String state) {
+        state = state;
+
+    }
+
+    public String getState() {
         return state;
     }
 
-    public void setState(State state) {
+    public void setState(String state) {
         this.state = state;
     }
-
-    public void changeState() {
-        state = State.completed;
-
-    }
-}
- enum State {
-    completed,
-    pending,
-
 }

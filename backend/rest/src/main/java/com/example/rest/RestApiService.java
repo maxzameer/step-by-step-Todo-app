@@ -27,9 +27,9 @@ public class RestApiService {
 
     @GetMapping("add")
     public ArrayList<ToDo> add() {
-        todoList.add(new ToDo(genid(),"aman", new Date(), "bake food"));
-        todoList.add(new ToDo(genid(),"amana", new Date(), "eat food"));
-        todoList.add(new ToDo(genid(),"amanat", new Date(), "eat food"));
+        todoList.add(new ToDo(genid(),"aman", new Date(), "bake food","pending"));
+        todoList.add(new ToDo(genid(),"amana", new Date(), "eat food","pending"));
+        todoList.add(new ToDo(genid(),"amanat", new Date(), "eat food","pending"));
         return todoList;
     }
 
@@ -50,7 +50,7 @@ public class RestApiService {
         return t;
     }
 
-    @PutMapping("{id}")
+    @PutMapping("/update/{id}")
     public ToDo update(@PathVariable int id,@RequestBody ToDo updatedItem){
         int index =   todoList.indexOf(searchByid(todoList,id));
         todoList.set(index,updatedItem);
@@ -58,9 +58,9 @@ public class RestApiService {
 
     }
 
-   
 
-    @DeleteMapping("{id}")
+
+    @DeleteMapping("/delete/{id}")
     public ArrayList<ToDo> delete(@PathVariable int id){
         int index =   todoList.indexOf(searchByid(todoList,id));
         todoList.remove(index);
