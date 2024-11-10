@@ -29,7 +29,7 @@ const TodoApp = () => {
       axios
         .post("http://localhost:8080/todo/create", data)
         .then((response) => {
-          alert(response.status);
+          alert("task added successfully");
         })
         .catch();
 

@@ -46,7 +46,9 @@ const Task = () => {
   const handleDeleteTodo = (index) => {
     let a = todos[index].id;
 
-    axios.delete("http://localhost:8080/todo/delete/" + a);
+    axios.delete("http://localhost:8080/todo/delete/" + a).then((response) => {
+      alert("delete succesfully");
+    });
     const newTodos = todos.filter((_, i) => i !== index);
     setTodos(newTodos);
   };
